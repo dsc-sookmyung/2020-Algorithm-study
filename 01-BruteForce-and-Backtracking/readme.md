@@ -8,7 +8,7 @@
 
 ### 2. 출석 인정 조건
 - DSC Sookmyung 그룹 내의 해당 주차 연습 스코어보드를 기준으로 필수문제가 모두 풀려있어야 함
-- 푼 문제의 정답 코드를 DSC Sookmyung Github의 2020-Algorithm-study 레포지토리에 올려야 함
+- 푼 문제의 정답 코드를 DSC Sookmyung Github의 2020-Algorithm-study 레포지토리에 올려야 함(아래의 `3. 코드 제출 방법`을 참고해주세요)
 
 ### 3. 코드 제출 방법
 1. 자신의 로컬 저장소에 원격 레포지토리를 pull합니다.
