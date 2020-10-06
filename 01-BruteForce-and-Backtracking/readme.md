@@ -15,7 +15,7 @@
 2. 해당하는 주차의 폴더 안에 **자신의 백준 아이디를 이름으로 하는 폴더**를 생성합니다. ex) `01-BruteForce-and-Backtracking/ccoco`
 3. 폴더 안에 자신의 정답 코드를 작성합니다. 코드 파일의 제목은 `문제의 알파벳 번호-문제 번호`로 합니다. ex) `01-BruteForce-and-Backtracking/ccoco/A-2309.cpp`
 > ⭐️ C++로만 푸실 필요는 없습니다. Python이나 Java 등의 다른 언어들을 사용하셔도 됩니다.
-4. 작성이 끝났다면 master branch로 push해주세요.
+4. 작성이 끝났다면 master branch로 push해 주세요.
 
 ### 4. 마감 기한
 - 10월 12일(월) 오후 8시 59분까지
