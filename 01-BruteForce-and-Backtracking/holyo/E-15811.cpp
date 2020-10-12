@@ -60,7 +60,7 @@ int main() {
         return 0;
     }
     
-    asign(0);
+    assign(0);
     
     if (answer) cout << "YES\n";
     else cout << "NO\n";
