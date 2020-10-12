@@ -1,35 +1,68 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-const int MAX = 10;
-int n;
-int answer[MAX];
-char sign[MAX][MAX];
+string word1, word2, result;
+bool alph_exist[26];
+vector<int> alph;
+bool num_selected[10];
+int alph_to_num[26];
+bool answer = false;
 
-void go(int index) {
-    if (index == n) return;
-    for (int value = -10; value <= 10; value++) {
-        for (int i = index; i >= 0; i--) {
-            char s = sign[i][index];
-            
+void check_exist(string word) {
+    for (int i = 0; i < word.length(); i++) {
+        alph_exist[word[i] - 'A'] = true;
+    }
+}
+
+int convert(string word) {
+    int num = 0;
+    for (int i = 0; i < word.length(); i++) {
+        num *= 10;
+        num += alph_to_num[word[i] - 'A'];
+    }
+    return num;
+}
+
+void asign(int n) {
+    if (n == alph.size()) {
+        if (convert(word1) + convert(word2) == convert(result)) {
+            answer = true;
+        }
+        return;
+    }
+    
+    for (int i = 0; i < 10; i++) {
+        if (!num_selected[i]) {
+            num_selected[i] = true;
+            alph_to_num[alph[n]] = i;
+            asign(n + 1);
+            num_selected[i] = false;
         }
     }
 }
 
 int main() {
-    cin >> n;
+    cin >> word1 >> word2 >> result;
     
-    string input;
-    cin >> input;
+    check_exist(word1);
+    check_exist(word2);
+    check_exist(result);
     
-    int index = 0;
-    for (int i = 0; i < n; i++) {
-        for (int j = i; j < n; j++) {
-            sign[i][j] = input[index++];
-        }
+    for (int i = 0; i < 26; i++) {
+        if (alph_exist[i]) alph.push_back(i);
     }
     
+    if (alph.size() > 10) {
+        cout << "NO\n";
+        return 0;
+    }
+    
+    asign(0);
+    
+    if (answer) cout << "YES\n";
+    else cout << "NO\n";
     return 0;
 }
