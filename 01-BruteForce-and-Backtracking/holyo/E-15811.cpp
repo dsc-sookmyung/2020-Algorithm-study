@@ -26,7 +26,7 @@ int convert(string word) {
     return num;
 }
 
-void asign(int n) {
+void assign(int n) {
     if (n == alph.size()) {
         if (convert(word1) + convert(word2) == convert(result)) {
             answer = true;
