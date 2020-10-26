@@ -1,4 +1,4 @@
-# 01 브루트 포스와 백트래킹
+# 03 스택
 > Study Lead: 남수연(컴퓨터과학전공 19)
 ### 1. 과제 안내
 - Link: https://www.acmicpc.net/group/practice/9273/4
