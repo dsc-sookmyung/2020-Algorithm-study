@@ -8,6 +8,8 @@ vector<int> info;
 int num = 0;
 
 int main() {
+    cin.tie(0); 
+    cout.tie(0);
 	ios::sync_with_stdio(false);
 	cin >> N >> k;
 	int doll;
@@ -17,24 +19,15 @@ int main() {
 	}
 
 	int size = 0;
-	int min = 10000001;
+    int min = 10000001;
 
 	int start = 0, end = 0;
-	while (end <= N) {
+	while (start<=end && end <= N) {
 		if (num < k) {
-			if (info[start] != 1) {
-				start++;
-				if (start >= end) {
-					end++;
-				}
+			if (info[end] == 1) {
+                num++;
 			}
-			else if (info[end] == 1) {
-				num++;
-				end++;
-			}
-			else {
-				end++;
-			}
+			end++;
 		}
 		else if (num == k) {
 			size = end - start;
@@ -43,13 +36,14 @@ int main() {
 				if (end == N) {
 					break;
 				}
-				else {
-					if (info[start] == 1) {
-						num--;
-					}
-					start++;
-				}
+            }
+			if (info[start] == 1) {
+				num--;
+                start++;
 			}
+            else {
+                start++;
+            }
 		}
 	}
 
