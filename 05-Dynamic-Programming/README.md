@@ -1,4 +1,4 @@
-# 05 큐, 덱
+# 05 다이나믹 프로그래밍
 > Study Lead: 남수연(컴퓨터과학전공 19)
 ### 1. 과제 안내
 - Link: https://www.acmicpc.net/group/practice/9273/6
