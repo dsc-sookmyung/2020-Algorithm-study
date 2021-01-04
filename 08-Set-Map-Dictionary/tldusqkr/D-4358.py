@@ -1,21 +1,15 @@
 import sys
-input = sys.stdin.readline
-
-def getProb(T, t):
-    return t / T * 100
-
-data = input().split('\n')
-dic = {}
-T = 0
-for d in data: 
-    if d != '':
-        T += 1
-        if d not in dic.keys():
-            dic[d] = 1
-        else:
-            dic[d] += 1
-
-result = sorted(dic.items())
-
-for t in result:
-    print("%s %.4f" % (t[0], getProb(T, t[1])))
+ 
+m = {}
+sum = 0
+ 
+while True:
+    name = sys.stdin.readline().strip()
+    if not name:
+        break
+    m.setdefault(name, 0)
+    m[name] += 1
+    sum += 1
+ 
+for name in sorted(m.keys()):
+    print('{0} {1:0.4f}'.format(name, m[name]*100/sum))
